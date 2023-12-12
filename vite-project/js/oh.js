@@ -5,6 +5,6 @@ async function getData() {
     );
     let villagers = await res.json();
 
-    villagers.forEach((villager) => console.log(villager.name));
+    villagers.forEach((villager) => console.log(villager.name, villager.species, villager.phrase));
 }
 getData();
