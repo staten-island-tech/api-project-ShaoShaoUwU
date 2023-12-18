@@ -19,5 +19,13 @@ async function getData() {
     );
 }
 getData();
+function search() {
+        let name = Thing.textContent()
+        let newArr = villagers.filter((villager) => villager.name.includes(name))
+        document.querySelector(".gallery").innerHTML = ""
+        populate(newArr)
+    }
+
+search();
 
 
