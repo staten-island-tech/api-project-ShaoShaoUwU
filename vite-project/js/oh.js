@@ -2,7 +2,7 @@ import { DOMselectors } from "./idk.js"
 
 async function getData() {
     let res = await fetch(
-        "https://api.nookipedia.com/villagers?&api_key=cdaec8de-8006-4747-9dec-088bf32c815c"
+        "https://api.nookipedia.com/villagers?name={value}&api_key=cdaec8de-8006-4747-9dec-088bf32c815c"
     );
     let villagers = await res.json()
     /* villagers.forEach((villager) => console.log(villager.name)); */
@@ -17,6 +17,7 @@ async function getData() {
                </div>`
         )
     );
+    
 }
 getData();
 function search() {
@@ -27,5 +28,4 @@ function search() {
     }
 
 search();
-
 
