@@ -1,11 +1,14 @@
-import { DOMselectors } from "./idk.js"
+import { DOMselectors } from "./idk";
 
-async function getData() {
-    let res = await fetch(
-        "https://api.nookipedia.com/villagers?name={value}&api_key=cdaec8de-8006-4747-9dec-088bf32c815c"
-    );
+async function getData(API) {
+
+    let value = DOMselectors.Thing.value;
+    let res = await fetch(API);
+    API = `https://api.nookipedia.com/villagers?name=${value}&api_key=cdaec8de-8006-4747-9dec-088bf32c815c`;
+    
     let villagers = await res.json()
     /* villagers.forEach((villager) => console.log(villager.name)); */
+    
     villagers.forEach((villager) =>
         DOMselectors.gallery.insertAdjacentHTML(
             "beforeend",
@@ -17,15 +20,6 @@ async function getData() {
                </div>`
         )
     );
-    
-}
+        };
 getData();
-function search() {
-        let name = Thing.textContent()
-        let newArr = villagers.filter((villager) => villager.name.includes(name))
-        document.querySelector(".gallery").innerHTML = ""
-        populate(newArr)
-    }
-
-search();
 
