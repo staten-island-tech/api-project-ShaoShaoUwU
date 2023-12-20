@@ -3,8 +3,9 @@ import { DOMselectors } from "./idk";
 async function getData(API) {
 
     let value = DOMselectors.Thing.value;
-    let res = await fetch(API);
     API = `https://api.nookipedia.com/villagers?name=${value}&api_key=cdaec8de-8006-4747-9dec-088bf32c815c`;
+    let res = await fetch(API);
+   
     
     let villagers = await res.json()
     /* villagers.forEach((villager) => console.log(villager.name)); */
