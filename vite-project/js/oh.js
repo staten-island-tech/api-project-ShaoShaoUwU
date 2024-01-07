@@ -1,6 +1,50 @@
 import { DOMselectors } from "./idk";
+const API = `https://api.nookipedia.com/villagers?&api_key=cdaec8de-8006-4747-9dec-088bf32c815c`
+async function getData(API) {
+    try {
+        const res = await fetch(API);
+        console.log(res);
+        if (res.status != 200) {
+            throw new Error(res.statusText);
+        }
 
-function roop {
+        const villagers = await res.json();
+
+        console.log(villagers);
+
+
+        function ello(arr) {
+            arr.forEach((villager) =>
+                DOMselectors.gallery.insertAdjacentHTML(
+                    "beforeend",
+                    `<div class="gall">
+           <h2 class="Name">${villager.name}</h2>
+           <img src="${villager.image_url}" alt="Villager Image" class="img"/>
+           <h3 class="Species">${villager.species}</h3>
+           <h3 class="StarSign">${villager.sign}</h3>
+       </div>` )
+            );
+
+        }
+        function pello() {
+            DOMselectors.sumbit.addEventListener("click", function (event) {
+                DOMselectors.gallery.innerHTML = ""
+                let Vname = DOMselectors.form.value
+                let name = villagers.filter((villager) => villager.name === Vname)
+                let found = villagers.filter((villager) => villager.name.includes(Vname))
+                ello(found)
+                event.preventDefault()
+            }
+            )
+        }
+        pello()
+    } catch (error){
+        console.log(error)
+    }
+}
+getData(API);
+
+/* function roop {
     DOMselectors.Thing.addEventListener("click", function () {
         async function getData() {
             let value = DOMselectors.Thing.value
@@ -32,7 +76,7 @@ function roop {
 };
 
 roop();
-getData();
+getData(); */
 /* async function getData() {
         /* villagers.forEach((villager) => console.log(villager.name)); 
         let res = await fetch("https://api.nookipedia.com/villagers?&api_key=cdaec8de-8006-4747-9dec-088bf32c815c");
