@@ -1,6 +1,6 @@
 :root {
-
-  --WestCoast: #785A28;
+  
+ --WestCoast: #785A28;
   --Marigold: #C89B3C;
   --HarvestGold: #C8AA6E;
   --AlbescentWhite: #F0E6D2;
@@ -22,7 +22,7 @@
   /*border */
   --Pink: #ffc2d1;
   /* bgc */
-  --Remy: #ffe5ec;
+  --Remy: #ffe5ec; 
 
   --primary: var(--Marigold);
   --secondary: var(--HarvestGold);

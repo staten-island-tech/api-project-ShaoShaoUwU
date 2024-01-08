@@ -27,10 +27,9 @@ async function getData(API) {
 
         }
         function pello() {
-            DOMselectors.sumbit.addEventListener("click", function (event) {
+            DOMselectors.enter.addEventListener("click", function (event) {
                 DOMselectors.gallery.innerHTML = ""
-                let Vname = DOMselectors.form.value
-                let name = villagers.filter((villager) => villager.name === Vname)
+                let Vname = DOMselectors.Thing.value
                 let found = villagers.filter((villager) => villager.name.includes(Vname))
                 ello(found)
                 event.preventDefault()
