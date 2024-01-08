@@ -1,6 +1,6 @@
 export const DOMselectors = {
-    Thing: document.querySelector(".Thing"),
+    Thing: document.querySelector("#search"),
     gallery: document.querySelector(".gallery"),
     card: document.querySelectorAll(".gall"),
-    buttons: document.querySelectorAll(".btn"),  
+    enter: document.querySelector("#enter")
 }

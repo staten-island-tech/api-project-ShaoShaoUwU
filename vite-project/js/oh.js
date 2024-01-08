@@ -1,6 +1,50 @@
 import { DOMselectors } from "./idk";
+const API = `https://api.nookipedia.com/villagers?&api_key=cdaec8de-8006-4747-9dec-088bf32c815c`
+async function getData(API) {
+    try {
+        const res = await fetch(API);
+        console.log(res);
+        if (res.status != 200) {
+            throw new Error(res.statusText);
+        }
 
-/* function roop() {
+        const villagers = await res.json();
+
+        console.log(villagers);
+
+
+        function ello(arr) {
+            arr.forEach((villager) =>
+                DOMselectors.gallery.insertAdjacentHTML(
+                    "beforeend",
+                    `<div class="gall">
+           <h2 class="Name">${villager.name}</h2>
+           <img src="${villager.image_url}" alt="Villager Image" class="img"/>
+           <h3 class="Species">${villager.species}</h3>
+           <h3 class="StarSign">${villager.sign}</h3>
+       </div>` )
+            );
+
+        }
+        function pello() {
+            DOMselectors.enter.addEventListener("click", function (event) {
+                DOMselectors.gallery.innerHTML = ""
+                let Vname = DOMselectors.Thing.value
+                let found = villagers.filter((villager) => villager.name.includes(Vname))
+                ello(found)
+                event.preventDefault()
+            }
+            )
+        }
+        pello()
+    } catch (error){
+        console.log(error)
+    }
+}
+getData(API);
+
+/* function roop {
+>>>>>>> aa823b8759ad332b2a5e518778785115fdb13a4d
     DOMselectors.Thing.addEventListener("click", function () {
         async function getData() {
             let value = DOMselectors.Thing.value
@@ -34,8 +78,10 @@ import { DOMselectors } from "./idk";
 };
  */
 
- async function getData() {
-         villagers.forEach((villager) => console.log(villager.name)); 
+// roop();
+// getData(); 
+/* async function getData() {
+        /* villagers.forEach((villager) => console.log(villager.name)); 
         let res = await fetch("https://api.nookipedia.com/villagers?&api_key=cdaec8de-8006-4747-9dec-088bf32c815c");
         let villagers = await res.json();
         villagers.forEach((villager) =>

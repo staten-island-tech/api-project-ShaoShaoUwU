@@ -1,33 +1,29 @@
 :root {
+  --PastelYellow: #fff563;
+  --PastelGreen: #9dffb0;
+  --SkyBlue: #81f1f7;
+  --white: #fffffa;
+  --brownie: #c48d3f;
 
   --WestCoast: #785A28;
   --Marigold: #C89B3C;
   --HarvestGold: #C8AA6E;
   --AlbescentWhite: #F0E6D2;
-
   --CloudBurst: #283151;
-  /* shadow */
   --WaikawaGray: #607aa6;
-  /*box bgc */
   --PoloBlue: #94a7ce;
-  /*border */
   --Snuff: #d2d0e7;
-  /* bgc */
   --BlueChalk: #E4E0ff;
   --WildWatermelon: #fb6f92;
-  /* shadow */
   --TickleMePink: #ff8fab;
-  /*box bgc */
   --Lightpink: #ffb3c6;
-  /*border */
   --Pink: #ffc2d1;
-  /* bgc */
-  --Remy: #ffe5ec;
+  --Remy: #ffe5ec; 
 
-  --primary: var(--Marigold);
-  --secondary: var(--HarvestGold);
-  --tertiary: var(--AlbescentWhite);
-  --quaternary: var(--WestCoast);
+  --primary: var(--Lightpink);
+  --secondary: var(--TickleMePink);
+  --tertiary: var(--Pink);
+  --quaternary: var(--WildWatermelon);
 }
 
 .Pink {
@@ -75,7 +71,7 @@ html,
   font-family: 'Bad Script', cursive;
   border: 10px solid var(--secondary);
   box-shadow: 10px 7px 10px var(--quaternary);
-
+  border-radius: 25px;
 }
 
 .gallery {
@@ -96,6 +92,7 @@ html,
   padding: 3px;
   background-color: var(--primary);
   box-shadow: 10px 7px 10px var(--quaternary);
+  border-radius: 25px;
 }
 
 .img {
@@ -103,6 +100,7 @@ html,
   height: 70%;
   border: 10px solid var(--secondary);
   background-color: var(--primary);
+  border-radius: 25px;
 }
 
 .Name {
@@ -139,7 +137,7 @@ html,
   
 }
 
-#button {
+#enter {
   font-size: 1.1rem;
   font-family: 'Bad Script', cursive;
   flex-direction: column;
@@ -151,8 +149,9 @@ html,
   margin-bottom: 20px;
   width: 10%;
   border: 10px solid var(--secondary);
-  box-shadow: 10px 7px 10px var(--quaternary)
-  
+  box-shadow: 10px 7px 10px var(--quaternary);
+  background-color: var(--primary);
+  border-radius: 25px;
 }
 .themes{
   flex-direction: row;
