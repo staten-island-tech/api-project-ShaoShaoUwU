@@ -26,18 +26,20 @@ async function getData(API) {
             );
 
         }
+        ello(villagers);
+
         function pello() {
             DOMselectors.enter.addEventListener("click", function (event) {
                 DOMselectors.gallery.innerHTML = ""
-                let Vname = DOMselectors.Thing.value
-                let found = villagers.filter((villager) => villager.name.includes(Vname))
-                ello(found)
-                event.preventDefault()
+                let vname = DOMselectors.search.value
+                let found = villagers.filter((villager) => villager.name.includes([vname]))
+                ello(found);
+                event.preventDefault();
             }
             )
         }
-        pello()
-    } catch (error){
+        pello();
+    } catch (error) {
         console.log(error)
     }
 }
@@ -55,7 +57,7 @@ getData(API);
                 }
                 let villagers = await res.json();
                 POOOP(villagers);
-        
+
             } catch (error) {
                 console.error('zzz', error);
             }
@@ -98,4 +100,4 @@ getData(API);
 
 
 
-getData();*/ 
+getData();*/
