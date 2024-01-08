@@ -1,6 +1,6 @@
 import { DOMselectors } from "./idk";
 
-function roop {
+/* function roop() {
     DOMselectors.Thing.addEventListener("click", function () {
         async function getData() {
             let value = DOMselectors.Thing.value
@@ -12,6 +12,7 @@ function roop {
                 }
                 let villagers = await res.json();
                 POOOP(villagers);
+        
             } catch (error) {
                 console.error('zzz', error);
             }
@@ -28,13 +29,13 @@ function roop {
                     )
                 );
             }
-    )}
+        }
+    })
 };
+ */
 
-roop();
-getData();
-/* async function getData() {
-        /* villagers.forEach((villager) => console.log(villager.name)); 
+ async function getData() {
+         villagers.forEach((villager) => console.log(villager.name)); 
         let res = await fetch("https://api.nookipedia.com/villagers?&api_key=cdaec8de-8006-4747-9dec-088bf32c815c");
         let villagers = await res.json();
         villagers.forEach((villager) =>
@@ -53,4 +54,3 @@ getData();
 
 
 getData();
- */
