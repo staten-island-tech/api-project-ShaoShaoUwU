@@ -44,7 +44,6 @@ async function getData(API) {
 getData(API);
 
 /* function roop {
->>>>>>> aa823b8759ad332b2a5e518778785115fdb13a4d
     DOMselectors.Thing.addEventListener("click", function () {
         async function getData() {
             let value = DOMselectors.Thing.value
@@ -99,4 +98,4 @@ getData(API);
 
 
 
-getData();
+getData();*/ 
