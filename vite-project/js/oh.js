@@ -28,17 +28,17 @@ async function getData(API) {
         }
         ello(villagers);
 
-        function pello() {
-            DOMselectors.enter.addEventListener("click", function (event) {
-                DOMselectors.gallery.innerHTML = ""
-                let vname = DOMselectors.search.value
-                let found = villagers.filter((villager) => villager.name.includes([vname]))
-                ello(found);
-                event.preventDefault();
+        function pello(arr) {
+         DOMselectors.enter.addEventListener("click", function (event) {
+            event.preventDefault();
+            DOMselectors.gallery.innerHTML = ""
+            let vname = DOMselectors.search.value
+            let found = arr.filter((villager) => villager.name.includes((`${vname}`)))
+               ello(found);    
             }
-            )
-        }
-        pello();
+         )
+     }
+        pello(villagers);
     } catch (error) {
         console.log(error)
     }
