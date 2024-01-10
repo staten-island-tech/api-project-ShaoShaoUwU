@@ -33,6 +33,7 @@ async function getData(API) {
          DOMselectors.enter.addEventListener("click", function (event) {
             event.preventDefault();
             DOMselectors.gallery.innerHTML = ""
+            DOMselectors.galleri.innerHTML = ""
             let vname = DOMselectors.search.value
             let found = arr.filter((villager) => villager.name.includes((`${vname}`)))
                ello(found);    
@@ -77,6 +78,7 @@ async function getArt(Art) {
          DOMselectors.enter.addEventListener("click", function (event) {
             event.preventDefault();
             DOMselectors.gallery.innerHTML = ""
+            DOMselectors.galleri.innerHTML = ""
             let aname = DOMselectors.search.value
             let found = arr.filter((art) => art.name.includes((`${aname}`)))
                ello(found);    
