@@ -79,7 +79,11 @@ html,
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
+.galleri {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .gall {
   width: 23%;
   height: 31vh;
