@@ -142,7 +142,39 @@ html,
   background-color: var(--primary);
   border-radius: 25px;
 }
+#artenter {
+  font-size: 1.1rem;
+  font-family: 'Bad Script', cursive;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  width: 10%;
+  border: 10px solid var(--secondary);
+  box-shadow: 10px 7px 10px var(--quaternary);
+  background-color: var(--primary);
+  border-radius: 25px;
+}
 .search {
+  font-size: 1.1rem;
+  font-family: 'Bad Script', cursive;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  width: 10%;
+  border: 10px solid var(--secondary);
+  box-shadow: 10px 7px 10px var(--quaternary);
+  background-color: var(--primary);
+  border-radius: 25px;
+}
+.artsearch {
   font-size: 1.1rem;
   font-family: 'Bad Script', cursive;
   flex-direction: column;
