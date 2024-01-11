@@ -75,11 +75,11 @@ async function getArt(Art) {
         ello(arts);
 
         function pello(arr) {
-         DOMselectors.enter.addEventListener("click", function (event) {
+         DOMselectors.artenter.addEventListener("click", function (event) {
             event.preventDefault();
             DOMselectors.gallery.innerHTML = ""
             DOMselectors.galleri.innerHTML = ""
-            let aname = DOMselectors.search.value
+            let aname = DOMselectors.artsearch.value
             let found = arr.filter((art) => art.name.includes((`${aname}`)))
                ello(found);    
             }
